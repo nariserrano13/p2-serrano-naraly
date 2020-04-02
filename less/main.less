@@ -11,8 +11,6 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
     display:block;
 }
 body{
-	max-width: 825px;
-	margin: auto;
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -22,6 +20,10 @@ header{
 	.nav-logo img{
 		max-width: 75px;
 	}
+}
+.container{
+	max-width: 825px;
+	margin: auto;
 }
 main{
 	.hero{
@@ -45,9 +47,29 @@ main{
 		bottom: -65px;
 		box-shadow: 2px 2px #efefef;
 	}
+	.moveup_main{
+		position: relative;
+		top: -35px;
+		color: @blue;
+	}
+	.pink_horizontal_line{
+		border-top: 4px solid @pink;
+	}
+	.home-body-text{
+		h2{
+			text-align: right;
+			padding-right: 20px;
+			font-weight: 900;
+		}
+		p{
+			padding: 0px 20px;
+			font-size: 16px;
+		}
+	}
 }
 footer{
 	background-color: @blue;
+	color: #efefef;
 }
  
 @media(min-width:350px){
