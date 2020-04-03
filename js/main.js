@@ -12,3 +12,20 @@ function navmenu() {
   }
 
   
+var fundraiseIcon = document.getElementsByClassName('involved-collapse-content')[0];
+
+function involved_fundraise(){
+  fundraiseIcon.classList.toggle('involved-collapse-content');
+}
+
+var leadIcon = document.getElementsByClassName('involved-collapse-lead')[0];
+
+function involved_lead(){
+  leadIcon.classList.toggle('involved-collapse-lead');
+}
+
+var partnerIcon = document.getElementsByClassName('involved-collapse-partner')[0];
+
+function involved_partner(){
+  partnerIcon.classList.toggle('involved-collapse-partner');
+}

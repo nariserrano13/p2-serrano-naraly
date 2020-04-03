@@ -5,21 +5,121 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!--Css files-->
+		<!--css files-->
 		<link type="text/css" rel="stylesheet" href="css/main.css" />
 		<!--google fonts-->
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+		<!--font awesome minified icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv-printshiv.min.js"></script>
 		<![endif]-->
-		<title> Girls Who Code - Get Involved</title>
+		<title> Girls Who Code - Home</title>
 
 	</head>
 
 	<body>
+		<header>
+			<div class="nav-flex-position">
+				<figure class="nav-logo">
+					<img src="images/bluelogo.jpg" alt="girls who code logo in blue">
+				</figure>
+	
+				<div>
+					<a href="#" class="icon" onclick="navmenu()">
+						<i class="fas fa-bars"></i>			  
+					</a>	
+				</div>
+			</div>
 
+			<nav class="nav">
+				<ul id="nav-links">
+					<li><a href="#">HOME</a></li>
+					<li><a href="programs.html">PROGRAMS</a></li>
+					<li><a href="getinvolved.html">GET INVOLVED</a></li>
+				</ul>
+			</nav>
+			<nav class="desk-nav">
+				<figure class="desk-nav-logo">
+					<img src="images/bluelogo.jpg" alt="girls who code logo in blue">
+				</figure>
+				<div>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="programs.html">PROGRAMS</a></li>
+						<li><a href="#">GET INVOLVED</a></li>
+					</ul>
+				</div>
+			</nav>
 
+		</header>
+		<main class="container involved-flex">
+			<section class="involved-text">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsa possimus eius deserunt minus. Esse consectetur adipisci reprehenderit saepe cum repellat nisi sequi fugit aliquid, eveniet voluptatibus deserunt neque asperiores.
+				</p>
+			</section>
+			<section class="involved-icons">
+				<div>
+					<div class="involved-headers">
+						<h2>FUNDRAISE</h2>
+					</div>
+					<figure><img src="images/involved-img1.jpg" alt=""></figure>
+					<div class="involved-readmore" onclick="involved_fundraise()">
+						<h2>READ MORE</h2>
+					</div>
+					<div class="involved-collapse-content styles">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet, blanditiis labore laborum, sequi aspernatur id ducimus ea, sed delectus amet eos perspiciatis iusto quas sapiente inventore. Exercitationem, libero ut?
+					</div>
+				</div>
+				<div>
+					<div class="involved-headers">
+						<h2>LEAD</h2>
+					</div>
+					<figure><img src="images/involved-img2.jpg" alt=""></figure>
+					<div class="involved-readmore" onclick="involved_lead()">
+						<h2>READ MORE</h2>
+					</div>
+					<div class="involved-collapse-lead styles">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet, blanditiis labore laborum, sequi aspernatur id ducimus ea, sed delectus amet eos perspiciatis iusto quas sapiente inventore. Exercitationem, libero ut?
+					</div>
+				</div>
+				<div>
+					<div class="involved-headers">
+						<h2>PARTNER</h2>
+					</div>
+					<figure><img src="images/involved-img3.jpg" alt=""></figure>
+					<div class="involved-readmore" onclick="involved_partner()">
+						<h2>READ MORE</h2>
+					</div>
+					<div class="involved-collapse-partner styles">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet, blanditiis labore laborum, sequi aspernatur id ducimus ea, sed delectus amet eos perspiciatis iusto quas sapiente inventore. Exercitationem, libero ut?
+					</div>
+				</div>
+			</section>
+			<section class="involved-leaders">
+				<div><h3>CLUB LEADERS</h3></div>
+				<div><p>as of <span>API GOES HERE</span></p></div>
+				<div>
+					<div>
+						<img src="" alt="">
+						<h3>Harold Torres</h3>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container footer-flex">
+				<div>
+					<div><p>Lorem ipsum dolor </p></div>
+					<div><p>1011 13th ave, New York City, New York</p></div>
+				</div>
+				<div><img src="images/footer_logo.jpg" alt="white on teal girls who code logo">
+				</div>
+			</div>
+		</footer>
+		<script src="js/main.js"></script>
 	</body>
 
 </html>
