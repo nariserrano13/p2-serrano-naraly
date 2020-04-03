@@ -16,9 +16,44 @@ body{
 
 header{
 	position: relative;
-	z-index: 99;
+	z-index: 90;
+	.nav-flex-position{
+		display: flex;
+		justify-content: space-between;
+		border-top: 4px solid @pink;
+	}
+	.nav-logo{
+		position: relative;
+		left: 15px;
+	}
 	.nav-logo img{
 		max-width: 75px;
+		position: relative;
+		top: 5px;
+	}
+	.icon{
+		background-color: @pink;
+		position: relative;
+		right: 15px;
+		top: 5px;
+	}
+	#nav-links{
+		display: none;
+		z-index: 99;
+		position: absolute;
+		width: -webkit-fill-available;
+	}
+	#nav-links a{
+		color: #efefef;
+		padding: 14px 16px;
+		text-decoration: none;
+		text-align: center;
+		font-size: 17px;
+		display: block;
+		background-color: @pink;
+	}
+	#nav-links a:hover{
+		background-color: @blue;
 	}
 }
 .container{
@@ -34,7 +69,7 @@ main{
 		display: flex;
 		justify-content: space-evenly;
 		position: relative;
-		top: -47px;
+		top: -30px;
 	}
 	.hero a{
 		color: #efefef;
@@ -49,7 +84,7 @@ main{
 	}
 	.moveup_main{
 		position: relative;
-		top: -35px;
+		top: -15px;
 		color: @blue;
 	}
 	.pink_horizontal_line{
@@ -65,6 +100,36 @@ main{
 			padding: 0px 20px;
 			font-size: 16px;
 		}
+	}
+	.home-body-images{
+		color: @blue;
+		font-weight: 700;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		img{
+			max-width: 200px;
+		}
+		.image-stack{
+			display: grid;
+			grid-template-columns: repeat(12,fr);
+			position: relative;
+		}
+		.image-stack-item-top{
+			grid-column: 1 /span 8;
+			grid-row: 1;
+			padding-top: 15%;
+			z-index: 1;
+		}
+		.image-stack-item-bottom{
+			max-width: 30px;
+			grid-column: 4 / -1;
+			grid-row: 1;
+		}
+	}
+	.home-desk-body-images {
+		display: none;
 	}
 }
 footer{
@@ -90,6 +155,11 @@ footer{
 	}
 }
 @media(min-width:550px){
+	header{
+		.nav-logo img{
+			max-width: 100px;
+		}
+	}
 	main{
 		.hero{
 			padding: 9rem 2rem;
@@ -97,6 +167,46 @@ footer{
 		.hero a{
 			bottom: -105px;
 		}
+	}
+}
+@media(min-width:600px){
+	main{
+		.home-body-images{
+			display: none;
+		}
+		.home-desk-body-images{
+			display: block;
+			height: 9rem;
+			padding: 4rem 0rem;
+			.desk-image-stack{
+				position: relative;
+				.desk-image-stack-top{
+					position: absolute;
+					top: -60px;
+					z-index: 12;
+					display: flex;
+					justify-content: space-around;
+					width: -webkit-fill-available;
+					h2{
+						color: @blue;
+						font-weight: 900;  
+						text-align: center;
+					}
+					img{
+						max-width: 175px;
+					}
+				}
+				.desk-image-stack-bottom{
+					background-image: url("../images/GWC_pattern_med.png");
+					background-size: 125px 125px;
+					background-repeat: repeat-x;
+					position: absolute;
+					z-index: 1;
+					height: 175px;
+					width: 800px;
+				}
+			}
+		}	
 	}
 }
 @media(min-width:650px){
@@ -116,6 +226,9 @@ footer{
 		}
 		.hero a{
 			bottom: -135px;
+		}
+		.home-icons{
+			flex-direction: row;
 		}
 	}
 }

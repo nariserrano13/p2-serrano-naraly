@@ -4,10 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!--Css files-->
+		<!--css files-->
 		<link type="text/css" rel="stylesheet" href="css/main.css" />
 		<!--google fonts-->
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+		<!--font awesome minified icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv-printshiv.min.js"></script>
@@ -18,19 +20,26 @@
 
 	<body>
 		<header>
-			<figure class="nav-logo">
-				<img src="images/bluelogo.jpg" alt="girls who code logo in blue">
-			</figure>
-			<div class="nav-toggle">
-				<div class="nav-toggle-bar"></div>
+			<div class="nav-flex-position">
+				<figure class="nav-logo">
+					<img src="images/bluelogo.jpg" alt="girls who code logo in blue">
+				</figure>
+	
+				<div>
+					<a href="#" class="icon" onclick="navmenu()">
+						<i class="fas fa-bars"></i>			  
+					</a>	
+				</div>
 			</div>
+
 			<nav class="nav">
-				<ul>
+				<ul id="nav-links">
 					<li><a href="#">HOME</a></li>
 					<li><a href="programs.html">PROGRAMS</a></li>
 					<li><a href="getinvolved.html">GET INVOLVED</a></li>
 				</ul>
 			</nav>
+
 		</header>
 		
 		<main class="container">
@@ -52,12 +61,70 @@
 					</p>
 				</section>
 			</div>
+			 <div class="home-body-images">
+				 <div class="home-capabilities">
+					<h2>CAPABILITIES</h2>
+					<div class="image-stack">
+						<div class="image-stack-item-top">					
+							<img src="images/home_capabilities.jpg" alt="teen girl at laptop">					</div>
+						<div class="image-stack-item-bottom">
+							<img src="images/GWC_pattern_mini.png" role="presentation">
+						</div>	
+					</div>
+				 </div>
+				 <div class="home-career">
+					<h2>CAREER</h2>
+					<div class="image-stack">
+						<div class="image-stack-item-top">
+							<img src="images/home_career.jpg" alt="group of three girls sitting outside">
+						</div>
+						<div class="image-stack-item-bottom">
+							<img src="images/GWC_pattern_mini.png" role="presentation">
+						</div>
+					</div>
+				 </div>
+				 <div class="community">
+					<h2>COMMUNITY</h2>
+					<div class="image-stack">
+						<div class="image-stack-item-top">
+							<img src="images/home_community.jpg" alt="group of girls in school courtyard">
+						</div>
+						<div class="image-stack-item-bottom">
+							<img src="images/GWC_pattern_mini.png" role="presentation">
+						</div>
+					</div>
 
+				</div>
+			 </div>
+			 <div class="home-desk-body-images">
+				<div class="desk-image-stack">
+					<div class="desk-image-stack-top">
+							<div >
+								<h2>CAPABILITIES</h2>
+								<img src="images/home_capabilities.jpg" alt="teen girl at laptop">
+							</div>
+							<div>
+								<h2>CAREER</h2>
+								<img src="images/home_career.jpg" alt="group of three girls sitting outside">
+							</div>
+							<div>
+								<h2>COMMUNITY</h2>
+								<img src="images/home_community.jpg" alt="group of girls in school courtyard">
+							</div>
+					</div>
+					<div class="desk-image-stack-bottom"></div>
+				</div>
+
+			 </div>
+			 <div>
+				 <a href="getinvolved.html">Get Involved > </a>
+			 </div>
 		</main>
 		<footer>
 			<div class="container">
 				footer
 			</div>
 		</footer>
+		<script src="js/main.js"></script>
 	</body>
 </html>
