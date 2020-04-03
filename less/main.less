@@ -108,6 +108,7 @@ main{
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: 15px;
 		img{
 			max-width: 200px;
 		}
@@ -131,10 +132,41 @@ main{
 	.home-desk-body-images {
 		display: none;
 	}
+	.home-involved-button{
+		margin: auto;
+		height: 25px;
+		width: 120px;
+		background-color: @yellow;
+		border-radius: 4px;
+		padding: 7px 6px;
+		a{
+			text-decoration: none;
+			color: @blue;
+			font-weight: 900;
+		}
+	}
+	.home-involved-button:hover{
+		background-color: @pink;
+		a:hover{
+			color: #efefef;
+
+		}
+	}
 }
 footer{
 	background-color: @blue;
 	color: #efefef;
+	margin-top: 18px;
+	font-size: 14px;
+	img{
+		max-width: 90px;
+	}
+	.footer-flex{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 10px 7px 10px 7px;
+	}
 }
  
 @media(min-width:350px){
@@ -203,8 +235,7 @@ footer{
 					position: absolute;
 					z-index: 1;
 					height: 175px;
-					width: 800px;
-				}
+					width: -webkit-fill-available;				}
 			}
 		}	
 	}
