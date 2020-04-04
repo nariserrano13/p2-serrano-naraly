@@ -38,3 +38,34 @@ function involved_partner(){
 // } else {
 //       fundraiseIcon.classList.toggle('involved-collapse-content');
 // }
+
+
+//http://worldtimeapi.org/api/timezone/America/New_York.txt.
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+      //takes JSON response and turning it into a script that we can use
+        var apiResult = JSON.parse(this.responseText);
+
+        //Code Dealing With The API Data Goes Here
+
+          //this console.log(apiResult.datetime);
+          //gave 2020-04-04T15:07:41.852317-04:00 in console
+        console.log(apiResult.datetime);
+
+        var month = apiResult.datetime.slice(5,7);
+        console.log(month);
+
+        var day = apiResult.datetime.slice(8,10);
+        console.log(day);
+
+        var year = apiResult.datetime.slice(0,4);
+        console.log(year);
+    }
+};
+xmlhttp.open('GET', 'http://worldtimeapi.org/api/timezone/America/New_York', true);
+xmlhttp.send();
+
