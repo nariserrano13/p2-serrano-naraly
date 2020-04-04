@@ -13,6 +13,7 @@ function navmenu() {
 
   
 var fundraiseIcon = document.getElementsByClassName('involved-collapse-content')[0];
+var screenSize = screen.width;
 
 function involved_fundraise(){
   fundraiseIcon.classList.toggle('involved-collapse-content');
@@ -29,3 +30,11 @@ var partnerIcon = document.getElementsByClassName('involved-collapse-partner')[0
 function involved_partner(){
   partnerIcon.classList.toggle('involved-collapse-partner');
 }
+
+// is there a way to remove and add a div in dom using an if/else. 
+// how to get JS to recognize screen px size 
+// if (screensize == 600) {
+//   console.log('hi');
+// } else {
+//       fundraiseIcon.classList.toggle('involved-collapse-content');
+// }
