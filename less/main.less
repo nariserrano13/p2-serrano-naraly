@@ -275,6 +275,57 @@ main{
 		max-width: 286px;	
 		border-radius: 3px;
 	}
+	/*----------PROGRAMS PAGE STYLES BEGIN----------- */
+
+	.tabs{
+		overflow: hidden;
+		color:@blue;
+		width: 75%;
+		margin: auto;
+		max-width: 37rem;
+		display: flex;
+		flex-direction: column;
+
+		.clubs{
+			background-color: @yellow;
+		}
+		.summer{
+			background-color: @green;
+		}
+		.college{
+			background-color: @orange;
+		}
+		.active{
+			color:@blue;
+		}
+		div{
+			display: inline-block;
+			padding: 5px 15px;
+			border-radius: 2.5px;
+			font-weight: 900;
+		}
+
+	}
+	.programs-content{
+		display: none;
+		width: 75%;
+		color: @blue;
+		margin: auto;
+	}
+	#clubs{
+		background-color: @yellow;
+		display: block;
+	}
+	#summerProgram{
+		background-color: @green;
+	}
+	#collegeLoops{
+		background-color: @orange;
+	}
+	
+}
+.programs-main-position{
+	margin-top: 25px;
 }
 footer{
 	background-color: @blue;
@@ -419,8 +470,9 @@ footer{
 			}
 
 		}
-
-
+		.tabs{
+			flex-direction: row;
+		}
 	}
 }
 @media(min-width:650px){
