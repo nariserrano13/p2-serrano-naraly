@@ -311,7 +311,45 @@ main{
 		width: 75%;
 		color: @blue;
 		margin: auto;
+		div{
+			padding: 18px 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			p{
+				margin: 10px 0px;
+			}
+			a{
+				background-color: @blue;
+				color: #efefef;
+				text-decoration: none;
+				width: 130px;
+				text-align: center;
+				border-radius: 3px;
+				margin-top: 10px;
+				padding: 5px 3px;			}
+		}
+		img{
+			width: fit-content;
+			max-width: 300px;
+			display: flex;
+			justify-content: center;
+			border-radius: 2px;
+			border-width: 2px;
+			border-color: #efefef;
+		}
+		.mobile-clubs-img{
+		}
+		.desk-clubs-img{
+			display: none;
+		}
+		ul{
+			text-decoration: none;
+
+			list-style-type: none;
+		}
 	}
+
 	#clubs{
 		background-color: @yellow;
 		display: block;
@@ -374,6 +412,7 @@ footer{
 		.hero a{
 			bottom: -105px;
 		}
+
 	}
 }
 @media(min-width:600px){
@@ -468,7 +507,6 @@ footer{
 					margin: 25px 20px;
 				}
 			}
-
 		}
 		.tabs{
 			flex-direction: row;
@@ -483,10 +521,22 @@ footer{
 		.hero a{
 			font-size: 1.2rem;
 		}
+		.programs-content{
+			div {
+				align-items: center;
+				img{
+		
+					.mobile-clubs-img{
+						max-width: 250px;
+						width: fit-content;
+
+					}
+				}
+			}
+		}
 	}
 }
 @media(min-width:750px){
-
 	main{
 		.hero{
 			padding: 12rem 2rem;
@@ -496,6 +546,33 @@ footer{
 		}
 		.home-icons{
 			flex-direction: row;
+		}
+		.programs-content{
+				.college-list-position{
+					flex-direction: row;
+					justify-content: space-around;
+					margin-top: -25px;
+					img{
+						max-width: 200px;
+					}
+				}
+	
+		}
+
+	}
+}
+@media (min-width:950px){
+	main{
+		.programs-content{
+			.clubs-flex-position{
+				flex-direction: row;
+			}
+			.mobile-clubs-img{
+				display: none;
+			}
+			.desk-clubs-img{
+				display: block;
+			}
 		}
 	}
 }

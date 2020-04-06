@@ -31,17 +31,11 @@ function involved_partner(){
   partnerIcon.classList.toggle('involved-collapse-partner');
 }
 
-// is there a way to remove and add a div in dom using an if/else. 
-// how to get JS to recognize screen px size 
-// if (screensize == 600) {
-//   console.log('hi');
-// } else {
-//       fundraiseIcon.classList.toggle('involved-collapse-content');
-// }
-
 /*CODE FOR API 
 */
 //http://worldtimeapi.org/api/timezone/America/New_York.txt.
+
+var dateTextContainer = document.querySelector('.involved-leaders div span');
 
 var xmlhttp = new XMLHttpRequest();
 
@@ -56,22 +50,22 @@ xmlhttp.onreadystatechange = function() {
           //this by itself " console.log(apiResult.datetime); ""
           //gave 2020-04-04T15:07:41.852317-04:00 as a string 
           //in console & needed to be sliced using .slice
-        console.log(apiResult.datetime);
 
         var month = apiResult.datetime.slice(5,7);
-        console.log(month); 
 
         var day = apiResult.datetime.slice(8,10);
-        console.log(day);
 
         var year = apiResult.datetime.slice(0,4);
-        console.log(year);
+        var dateString = month + "." + day +"." + year;
+
+        var dateText = document.createTextNode(dateString);
+        dateTextContainer.appendChild(dateText);
     }
 };
 xmlhttp.open('GET', 'http://worldtimeapi.org/api/timezone/America/New_York', true);
 xmlhttp.send();
 
- //CODE FOR TABBED CONTENT
+ /*-----------CODE FOR TABBED CONTENT------------------*/
 
  function clubsTab(){
   var programsContent = document.getElementsByClassName("programs-content");
