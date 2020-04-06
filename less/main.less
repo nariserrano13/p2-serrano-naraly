@@ -311,6 +311,7 @@ main{
 		width: 75%;
 		color: @blue;
 		margin: auto;
+		position: relative;
 		div{
 			padding: 18px 30px;
 			display: flex;
@@ -326,8 +327,8 @@ main{
 				width: 130px;
 				text-align: center;
 				border-radius: 3px;
-				margin-top: 10px;
-				padding: 5px 3px;			}
+				margin: 0px 0px 49px 0px;				padding: 5px 3px;			
+			}
 		}
 		img{
 			width: fit-content;
@@ -337,8 +338,6 @@ main{
 			border-radius: 2px;
 			border-width: 2px;
 			border-color: #efefef;
-		}
-		.mobile-clubs-img{
 		}
 		.desk-clubs-img{
 			display: none;
@@ -356,6 +355,10 @@ main{
 	}
 	#summerProgram{
 		background-color: @green;
+		div{
+			position: relative;
+			top: -10px;
+		}
 	}
 	#collegeLoops{
 		background-color: @orange;
@@ -564,6 +567,9 @@ footer{
 @media (min-width:950px){
 	main{
 		.programs-content{
+			img{
+				max-width: 205px;
+			}
 			.clubs-flex-position{
 				flex-direction: row;
 			}
@@ -572,6 +578,7 @@ footer{
 			}
 			.desk-clubs-img{
 				display: block;
+				max-width: 200px;
 			}
 		}
 	}
